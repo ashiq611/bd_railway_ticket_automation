@@ -1,0 +1,36 @@
+﻿1. Download & Install NodeJS == Done
+After install successfully, then check the NodeJS from Environment Variable & CMD
+        node --version
+        npm --version
+
+2. Download & install VSCode == Done
+
+3. Create a new folder for project & open in VSCode == Done
+
+4. Open cmd/terminal then execute below command (this will create package.json) == Done
+  npm -i init     
+
+5. To install cypress == Done
+  npm install cypress --save -dev
+
+6. Start cypress == Done
+ npx cypress open     (or)
+ node_modules/.bin/cypress open
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+1. Download project: https://github.com/badhonparvej481/WEB_Automation_On_OrangeHRM_Using_Cypress_Cucumber
+
+2. Extract project
+
+3. Open project in VSCode
+
+4. Open terminal:
+
+5. npm init -y
+
+6. npm install cypress@12.14.0
+
