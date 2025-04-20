@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open --e2e --browser chrome",
+    "dev": "cypress run --headed --browser chrome",
     "cypress:execution": "cypress run --spec cypress/e2e/features/*",
     "cypress:execution-tags": "cypress run --env tags=@mobile",
     "allure:execution-headless": "cypress run --env allure=true",

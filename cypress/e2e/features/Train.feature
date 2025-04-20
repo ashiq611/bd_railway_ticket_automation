@@ -10,5 +10,5 @@ Scenario: User logs in if disclaimer modal exists
   Then I should see the selected seats
   Then I click on the Book Now button
 
-# Scenario: See the available tickets
+
   

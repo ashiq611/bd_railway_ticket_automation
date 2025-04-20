@@ -43,18 +43,18 @@ Then("Verify the Username", () => {
   cy.get(locator.FindAvailableBookNowButton)
 
 
-// 2. Wait for the seat classes to be visible
+
 cy.get(locator.SeatClass).should('exist');
 
-// 3. Find the seat class with "SNIGDHA" and check for availability
+
 cy.get('.single-seat-class')
-  .contains(data.Class)                           // Filter by class name
-  .parents('.single-seat-class')                // Get full class block
+  .contains(data.Class)      
+  .parents('.single-seat-class')             
   .within(() => {
     cy.get('.all-seats').invoke('text').then((text) => {
       const availableSeats = parseInt(text.trim());
       if (availableSeats > 0) {
-        cy.get('.book-now-btn').click();        // Click only if available
+        cy.get('.book-now-btn').click();     
       } else {
         cy.log('No seats available for SNIGDHA');
       }
@@ -72,7 +72,7 @@ Then("Select the first available bogie with seat", () => {
       const text = option.innerText;
       const value = option.value;
 
-      // Extract seat number using regex
+
       const match = text.match(/(\d+)\s*Seat/);
       const seatCount = match ? parseInt(match[1]) : 0;
 
@@ -80,7 +80,7 @@ Then("Select the first available bogie with seat", () => {
         cy.get('#select-bogie').select(value); 
         cy.log(`Selected option: ${text}`);
         found = true;
-        return true; // exit loop early
+        return true;
       }
 
       return false;
@@ -105,8 +105,6 @@ When('I select two available seats', () => {
 });
 
 Then('I should see the selected seats', () => {
-  // You can add assertions here to verify the selected seats
-  // For example, checking if the seats are now marked as booked
   cy.get(locator.SeatSelected).should('have.length', 2);
 });
 
